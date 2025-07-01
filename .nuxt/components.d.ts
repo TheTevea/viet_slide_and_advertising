@@ -12,7 +12,12 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'DeleteModal': typeof import("../components/DeleteModal")['default']
+      'AppErrorMessage': typeof import("../components/AppErrorMessage.vue")['default']
+    'AppLoader': typeof import("../components/AppLoader.vue")['default']
+    'AppNotification': typeof import("../components/AppNotification.vue")['default']
+    'AppStoryDisplay': typeof import("../components/AppStoryDisplay.vue")['default']
+    'AppStoryInput': typeof import("../components/AppStoryInput.vue")['default']
+    'DeleteModal': typeof import("../components/DeleteModal")['default']
     'ErrorMessage': typeof import("../components/ErrorMessage")['default']
     'Header': typeof import("../components/Header")['default']
     'ImageUploader': typeof import("../components/ImageUploader")['default']
@@ -22,6 +27,7 @@ interface _GlobalComponents {
     'SlideFormModal': typeof import("../components/SlideFormModal")['default']
     'SlideTable': typeof import("../components/SlideTable")['default']
     'StoryDisplay': typeof import("../components/StoryDisplay")['default']
+    'StoryHeader': typeof import("../components/StoryHeader.vue")['default']
     'StoryInput': typeof import("../components/StoryInput")['default']
     'AuthLayout': typeof import("../components/auth/AuthLayout")['default']
     'AuthLoginForm': typeof import("../components/auth/LoginForm")['default']
@@ -71,7 +77,12 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyDeleteModal': LazyComponent<typeof import("../components/DeleteModal")['default']>
+      'LazyAppErrorMessage': LazyComponent<typeof import("../components/AppErrorMessage.vue")['default']>
+    'LazyAppLoader': LazyComponent<typeof import("../components/AppLoader.vue")['default']>
+    'LazyAppNotification': LazyComponent<typeof import("../components/AppNotification.vue")['default']>
+    'LazyAppStoryDisplay': LazyComponent<typeof import("../components/AppStoryDisplay.vue")['default']>
+    'LazyAppStoryInput': LazyComponent<typeof import("../components/AppStoryInput.vue")['default']>
+    'LazyDeleteModal': LazyComponent<typeof import("../components/DeleteModal")['default']>
     'LazyErrorMessage': LazyComponent<typeof import("../components/ErrorMessage")['default']>
     'LazyHeader': LazyComponent<typeof import("../components/Header")['default']>
     'LazyImageUploader': LazyComponent<typeof import("../components/ImageUploader")['default']>
@@ -81,6 +92,7 @@ interface _GlobalComponents {
     'LazySlideFormModal': LazyComponent<typeof import("../components/SlideFormModal")['default']>
     'LazySlideTable': LazyComponent<typeof import("../components/SlideTable")['default']>
     'LazyStoryDisplay': LazyComponent<typeof import("../components/StoryDisplay")['default']>
+    'LazyStoryHeader': LazyComponent<typeof import("../components/StoryHeader.vue")['default']>
     'LazyStoryInput': LazyComponent<typeof import("../components/StoryInput")['default']>
     'LazyAuthLayout': LazyComponent<typeof import("../components/auth/AuthLayout")['default']>
     'LazyAuthLoginForm': LazyComponent<typeof import("../components/auth/LoginForm")['default']>
@@ -136,6 +148,11 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const AppErrorMessage: typeof import("../components/AppErrorMessage.vue")['default']
+export const AppLoader: typeof import("../components/AppLoader.vue")['default']
+export const AppNotification: typeof import("../components/AppNotification.vue")['default']
+export const AppStoryDisplay: typeof import("../components/AppStoryDisplay.vue")['default']
+export const AppStoryInput: typeof import("../components/AppStoryInput.vue")['default']
 export const DeleteModal: typeof import("../components/DeleteModal")['default']
 export const ErrorMessage: typeof import("../components/ErrorMessage")['default']
 export const Header: typeof import("../components/Header")['default']
@@ -146,6 +163,7 @@ export const Pagination: typeof import("../components/Pagination")['default']
 export const SlideFormModal: typeof import("../components/SlideFormModal")['default']
 export const SlideTable: typeof import("../components/SlideTable")['default']
 export const StoryDisplay: typeof import("../components/StoryDisplay")['default']
+export const StoryHeader: typeof import("../components/StoryHeader.vue")['default']
 export const StoryInput: typeof import("../components/StoryInput")['default']
 export const AuthLayout: typeof import("../components/auth/AuthLayout")['default']
 export const AuthLoginForm: typeof import("../components/auth/LoginForm")['default']
@@ -195,6 +213,11 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyAppErrorMessage: LazyComponent<typeof import("../components/AppErrorMessage.vue")['default']>
+export const LazyAppLoader: LazyComponent<typeof import("../components/AppLoader.vue")['default']>
+export const LazyAppNotification: LazyComponent<typeof import("../components/AppNotification.vue")['default']>
+export const LazyAppStoryDisplay: LazyComponent<typeof import("../components/AppStoryDisplay.vue")['default']>
+export const LazyAppStoryInput: LazyComponent<typeof import("../components/AppStoryInput.vue")['default']>
 export const LazyDeleteModal: LazyComponent<typeof import("../components/DeleteModal")['default']>
 export const LazyErrorMessage: LazyComponent<typeof import("../components/ErrorMessage")['default']>
 export const LazyHeader: LazyComponent<typeof import("../components/Header")['default']>
@@ -205,6 +228,7 @@ export const LazyPagination: LazyComponent<typeof import("../components/Paginati
 export const LazySlideFormModal: LazyComponent<typeof import("../components/SlideFormModal")['default']>
 export const LazySlideTable: LazyComponent<typeof import("../components/SlideTable")['default']>
 export const LazyStoryDisplay: LazyComponent<typeof import("../components/StoryDisplay")['default']>
+export const LazyStoryHeader: LazyComponent<typeof import("../components/StoryHeader.vue")['default']>
 export const LazyStoryInput: LazyComponent<typeof import("../components/StoryInput")['default']>
 export const LazyAuthLayout: LazyComponent<typeof import("../components/auth/AuthLayout")['default']>
 export const LazyAuthLoginForm: LazyComponent<typeof import("../components/auth/LoginForm")['default']>
