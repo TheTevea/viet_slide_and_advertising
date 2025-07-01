@@ -1,0 +1,85 @@
+<template>
+  <form @submit.prevent="handleSubmit" class="space-y-6">
+    <div v-if="error" class="bg-red-100 border border-red-300 text-red-700 text-sm rounded-lg p-3 text-center">
+      {{ error }}
+    </div>
+    
+    <div class="relative">
+      <label for="email" class="sr-only">Email</label>
+      <Mail class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+      <input
+        id="email"
+        v-model="email"
+        type="email"
+        placeholder="Email address"
+        class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg placeholder:text-slate-400 text-slate-800 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-200 outline-none"
+        required
+      />
+    </div>
+    
+    <div class="relative">
+      <label for="password" class="sr-only">Password</label>
+      <Lock class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+      <input
+        id="password"
+        v-model="password"
+        type="password"
+        placeholder="Password"
+        class="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg placeholder:text-slate-400 text-slate-800 focus:bg-white focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-200 outline-none"
+        required
+      />
+    </div>
+    
+    <button
+      type="submit"
+      :disabled="isLoading"
+      class="w-full flex justify-center items-center px-6 py-3.5 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all duration-200 disabled:bg-orange-300 disabled:cursor-not-allowed"
+    >
+      {{ isLoading ? 'Signing in...' : 'Sign In' }}
+    </button>
+    
+    <p class="text-center text-sm text-slate-500">
+      Don't have an account?
+      <button 
+        type="button" 
+        @click="$emit('navigate-to-register')" 
+        class="font-semibold text-orange-600 hover:underline"
+      >
+        Sign up
+      </button>
+    </p>
+  </form>
+</template>
+
+<script setup lang="ts">
+import { Mail, Lock } from 'lucide-vue-next'
+
+// Emits
+defineEmits<{
+  'navigate-to-register': []
+}>()
+
+// Composables
+const { login } = useAuth()
+
+// State
+const email = ref('admin@vireakbuntham.com')
+const password = ref('password123')
+const error = ref('')
+const isLoading = ref(false)
+
+// Methods
+const handleSubmit = async () => {
+  error.value = ''
+  isLoading.value = true
+  
+  try {
+    await login(email.value, password.value)
+    // On success, the index page will handle the redirect
+  } catch (err) {
+    error.value = err instanceof Error ? err.message : 'An unknown error occurred.'
+  } finally {
+    isLoading.value = false
+  }
+}
+</script>
