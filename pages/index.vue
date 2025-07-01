@@ -12,7 +12,7 @@ const { user } = useAuth()
 
 // Redirect based on authentication status
 watchEffect(() => {
-  if (process.client) {
+  if (import.meta.client) {
     if (user.value) {
       navigateTo('/slide-manager')
     } else {
