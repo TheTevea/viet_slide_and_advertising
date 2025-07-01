@@ -8,11 +8,13 @@
 </template>
 
 <script setup lang="ts">
+import { watchEffect } from 'vue'
+
 const { user } = useAuth()
 
 // Redirect based on authentication status
 watchEffect(() => {
-  if (process.client) {
+  if (typeof window !== 'undefined') {
     if (user.value) {
       navigateTo('/slide-manager')
     } else {

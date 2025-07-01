@@ -72,7 +72,7 @@ interface Props {
   navigateToLogin: () => void
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 
 const { register } = useAuth()
 

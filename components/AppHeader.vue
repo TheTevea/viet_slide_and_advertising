@@ -76,7 +76,7 @@ interface Props {
   onMenuClick: () => void
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 
 const { user, logout } = useAuth()
 

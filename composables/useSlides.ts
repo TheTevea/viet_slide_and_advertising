@@ -1,5 +1,5 @@
-import { ref, computed, watch } from 'vue'
-import type { Slide, SlideCategory, Notification } from '~/types'
+import { ref, readonly, watch } from 'vue'
+import type { Slide, SlideCategory, Notification } from '~/types/index'
 import { initialSlides } from '~/utils/mockData'
 
 // Global state for slides and notifications
@@ -9,7 +9,7 @@ const notifications = ref<Notification[]>([])
 // Initialize slides from localStorage on client side
 export const useSlides = () => {
   // Initialize from localStorage if available
-  if (process.client && slides.value.length === 0) {
+  if (typeof window !== 'undefined' && slides.value.length === 0) {
     try {
       const localData = localStorage.getItem('slides')
       slides.value = localData ? JSON.parse(localData) : initialSlides
@@ -20,7 +20,7 @@ export const useSlides = () => {
   }
 
   // Watch for changes and persist to localStorage
-  if (process.client) {
+  if (typeof window !== 'undefined') {
     watch(
       slides,
       (newSlides) => {
@@ -32,8 +32,8 @@ export const useSlides = () => {
 
   const getSlidesByCategory = (category: SlideCategory): Slide[] => {
     return slides.value
-      .filter(slide => slide.category === category)
-      .sort((a, b) => a.order - b.order)
+      .filter((slide: Slide) => slide.category === category)
+      .sort((a: Slide, b: Slide) => a.order - b.order)
   }
 
   const addSlide = (slideData: Omit<Slide, 'id' | 'updatedAt' | 'lastUpdatedBy'>) => {
@@ -48,7 +48,7 @@ export const useSlides = () => {
   }
 
   const updateSlide = (updatedSlide: Slide) => {
-    const index = slides.value.findIndex(slide => slide.id === updatedSlide.id)
+    const index = slides.value.findIndex((slide: Slide) => slide.id === updatedSlide.id)
     if (index !== -1) {
       slides.value[index] = {
         ...updatedSlide,
@@ -60,7 +60,7 @@ export const useSlides = () => {
   }
 
   const deleteSlide = (id: string) => {
-    slides.value = slides.value.filter(slide => slide.id !== id)
+    slides.value = slides.value.filter((slide: Slide) => slide.id !== id)
     addNotification('Slide deleted successfully!', 'success')
   }
 
@@ -75,7 +75,7 @@ export const useSlides = () => {
   }
 
   const removeNotification = (id: number) => {
-    notifications.value = notifications.value.filter(n => n.id !== id)
+    notifications.value = notifications.value.filter((n: Notification) => n.id !== id)
   }
 
   return {
