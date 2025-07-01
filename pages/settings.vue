@@ -89,6 +89,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import { useAuth } from '../composables/useAuth'
+import { useSlides } from '../composables/useSlides'
 
 // Auth redirect
 const { user } = useAuth()

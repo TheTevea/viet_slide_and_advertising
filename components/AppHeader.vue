@@ -70,6 +70,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { ChevronDown, Menu, LogOut } from 'lucide-vue-next'
+import { useAuth } from '../composables/useAuth'
 
 interface Props {
   title: string

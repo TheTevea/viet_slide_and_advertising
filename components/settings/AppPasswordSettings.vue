@@ -55,6 +55,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useAuth } from '../../composables/useAuth'
+import { useSlides } from '../../composables/useSlides'
 
 const { changePassword } = useAuth()
 const { addNotification } = useSlides()

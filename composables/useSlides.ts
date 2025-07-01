@@ -1,6 +1,6 @@
 import { ref, readonly, watch } from 'vue'
-import type { Slide, SlideCategory, Notification } from '~/types/index'
-import { initialSlides } from '~/utils/mockData'
+import type { Slide, SlideCategory, Notification } from '../types'
+import { initialSlides } from '../utils/mockData'
 
 // Global state for slides and notifications
 const slides = ref<Slide[]>([])

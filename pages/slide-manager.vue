@@ -93,6 +93,8 @@
 import { ref, computed, onMounted } from 'vue'
 import { Plus, Image as ImageIcon } from 'lucide-vue-next'
 import type { Slide, SlideCategory } from '~/types'
+import { useAuth } from '../composables/useAuth'
+import { useSlides } from '../composables/useSlides'
 
 // Auth redirect
 const { user } = useAuth()

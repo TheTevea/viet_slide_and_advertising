@@ -67,6 +67,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { User, Mail, Lock } from 'lucide-vue-next'
+import { useAuth } from '../../composables/useAuth'
 
 interface Props {
   navigateToLogin: () => void

@@ -139,7 +139,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { ChevronDown, LayoutDashboard, Presentation, X } from 'lucide-vue-next'
-import type { SlideCategory } from '~/types/index'
+import type { SlideCategory } from '../types'
 
 interface Props {
   activeCategory: SlideCategory

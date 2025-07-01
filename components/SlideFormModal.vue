@@ -87,7 +87,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { X } from 'lucide-vue-next'
-import type { Slide, SlideCategory } from '~/types'
+import type { Slide, SlideCategory } from '../types'
+import { useSlides } from '../composables/useSlides'
 
 interface Props {
   isOpen: boolean

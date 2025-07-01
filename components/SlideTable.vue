@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { Edit, Trash2 } from 'lucide-vue-next'
-import type { Slide } from '~/types'
+import type { Slide } from '../types'
 
 interface Props {
   slides: Slide[]

@@ -9,16 +9,17 @@
 
 <script setup lang="ts">
 import { watchEffect } from 'vue'
+import { useAuth } from '../composables/useAuth'
 
 const { user } = useAuth()
 
 // Redirect based on authentication status
-watchEffect(() => {
+watchEffect(async () => {
   if (typeof window !== 'undefined') {
     if (user.value) {
-      navigateTo('/slide-manager')
+      await navigateTo('/slide-manager')
     } else {
-      navigateTo('/login')
+      await navigateTo('/login')
     }
   }
 })

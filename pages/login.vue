@@ -62,8 +62,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { Mail, Lock } from 'lucide-vue-next'
+import { useAuth } from '../composables/useAuth'
 
 const { login, user } = useAuth()
 
@@ -73,9 +74,9 @@ const error = ref('')
 const isLoading = ref(false)
 
 // Redirect if already logged in
-watchEffect(() => {
+watchEffect(async () => {
   if (user.value) {
-    navigateTo('/slide-manager')
+    await navigateTo('/slide-manager')
   }
 })
 

@@ -1,5 +1,5 @@
 import { ref, watch, readonly } from 'vue'
-import type { User } from '~/types/index'
+import type { User } from '../types'
 
 // Mock user database - In a real app, this would be a backend API.
 const MOCK_USERS: { [id: string]: User } = {
