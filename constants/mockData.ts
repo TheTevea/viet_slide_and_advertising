@@ -1,4 +1,4 @@
-import { Slide } from '../types/index';
+import type { Slide } from '../types/index';
 
 export const initialSlides: Slide[] = [
   {

@@ -38,7 +38,7 @@ export const generateTitleFromImage = async (base64Image: string): Promise<strin
             contents: { parts: [imagePart, textPart] },
         });
 
-        return response.text.trim().replace(/["']/g, "");
+        return response.text?.trim().replace(/["']/g, "") || "";
 
     } catch (error) {
         console.error("Error generating title from Gemini API:", error);

@@ -104,13 +104,13 @@
         "./imports"
       ],
       "#tailwindcss": [
-        "./tailwind"
+        "./tailwind.css"
       ],
       "#tailwindcss/sources": [
-        "./tailwindcss/sources"
+        "./tailwindcss/sources.css"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev.json"
+        "./manifest/meta/8bfc23ca-e634-428f-a12b-9010c8367e95.json"
       ],
       "#components": [
         "./components"
@@ -181,6 +181,6 @@
     "../node_modules/@nuxt/devtools/dist/runtime/server",
     "../node_modules/@nuxt/telemetry/runtime/server",
     "../node_modules/@nuxt/telemetry/dist/runtime/server",
-    "dev"
+    "../.output"
   ]
 }

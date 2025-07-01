@@ -20,6 +20,21 @@ export interface Notification {
   type: 'success' | 'error';
 }
 
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export interface AuthContextType {
+  user: User | null;
+  login: (email: string, password: string) => Promise<void>;
+  register: (name: string, email: string, password: string) => Promise<void>;
+  logout: () => void;
+  updateProfile: (name: string) => Promise<void>;
+  changePassword: (currentPassword: string, newPassword: string) => Promise<void>;
+}
+
 export interface StoryInputProps {
   onSubmit: (prompt: string) => void;
   isLoading: boolean;
