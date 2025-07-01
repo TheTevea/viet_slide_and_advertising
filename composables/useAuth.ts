@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue'
+import { ref, watch, readonly } from 'vue'
 import type { User } from '~/types/index'
 
 // Mock user database - In a real app, this would be a backend API.
@@ -16,7 +16,7 @@ const user = ref<User | null>(null)
 // Initialize user from localStorage on client side
 export const useAuth = () => {
   // Initialize from localStorage if available
-  if (import.meta.client && !user.value) {
+  if (process.client && !user.value) {
     try {
       const storedUser = localStorage.getItem('authUser')
       if (storedUser) {
@@ -28,7 +28,7 @@ export const useAuth = () => {
   }
 
   // Watch for changes and persist to localStorage
-  if (import.meta.client) {
+  if (process.client) {
     watch(
       user,
       (newUser) => {

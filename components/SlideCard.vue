@@ -88,7 +88,7 @@ const handleDelete = () => {
   emit('delete', props.slide)
 }
 
-const handleClickOutside = (event: MouseEvent) => {
+const handleClickOutside = () => {
   if (isMenuOpen.value) {
     isMenuOpen.value = false
   }

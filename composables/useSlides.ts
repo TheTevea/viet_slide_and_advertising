@@ -1,4 +1,4 @@
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, readonly } from 'vue'
 import type { Slide, SlideCategory, Notification } from '~/types/index'
 import { initialSlides } from '~/utils/mockData'
 
@@ -9,7 +9,7 @@ const notifications = ref<Notification[]>([])
 // Initialize slides from localStorage on client side
 export const useSlides = () => {
   // Initialize from localStorage if available
-  if (import.meta.client && slides.value.length === 0) {
+  if (process.client && slides.value.length === 0) {
     try {
       const localData = localStorage.getItem('slides')
       slides.value = localData ? JSON.parse(localData) : initialSlides
@@ -20,7 +20,7 @@ export const useSlides = () => {
   }
 
   // Watch for changes and persist to localStorage
-  if (import.meta.client) {
+  if (process.client) {
     watch(
       slides,
       (newSlides) => {
