@@ -19,43 +19,12 @@ interface _GlobalComponents {
     'AppRegisterForm': typeof import("../components/AppRegisterForm.vue")['default']
     'AppSidebar': typeof import("../components/AppSidebar.vue")['default']
     'AuthLayout': typeof import("../components/AuthLayout.vue")['default']
-    'DeleteModal': typeof import("../components/DeleteModal")['default']
-    'ErrorMessage': typeof import("../components/ErrorMessage")['default']
-    'Header': typeof import("../components/Header")['default']
-    'ImageUploader': typeof import("../components/ImageUploader")['default']
-    'Loader': typeof import("../components/Loader")['default']
+    'DeleteModal': typeof import("../components/DeleteModal.vue")['default']
     'NavItem': typeof import("../components/NavItem.vue")['default']
-    'Notification': typeof import("../components/Notification")['default']
-    'Pagination': typeof import("../components/Pagination")['default']
-    'SlideFormModal': typeof import("../components/SlideFormModal")['default']
+    'SlideFormModal': typeof import("../components/SlideFormModal.vue")['default']
     'SlideManagerPage': typeof import("../components/SlideManagerPage.vue")['default']
-    'SlideTable': typeof import("../components/SlideTable")['default']
-    'StoryDisplay': typeof import("../components/StoryDisplay")['default']
-    'StoryInput': typeof import("../components/StoryInput")['default']
+    'SlideTable': typeof import("../components/SlideTable.vue")['default']
     'SubNavItem': typeof import("../components/SubNavItem.vue")['default']
-    'AuthLoginForm': typeof import("../components/auth/LoginForm")['default']
-    'AuthRegisterForm': typeof import("../components/auth/RegisterForm")['default']
-    'FeaturesStoryGeneratorErrorMessage': typeof import("../components/features/story-generator/ErrorMessage")['default']
-    'FeaturesStoryGeneratorHeader': typeof import("../components/features/story-generator/Header")['default']
-    'FeaturesStoryGeneratorLoader': typeof import("../components/features/story-generator/Loader")['default']
-    'FeaturesStoryGeneratorStoryDisplay': typeof import("../components/features/story-generator/StoryDisplay")['default']
-    'FeaturesStoryGeneratorStoryInput': typeof import("../components/features/story-generator/StoryInput")['default']
-    'LayoutHeader': typeof import("../components/layout/Header")['default']
-    'LayoutSidebar': typeof import("../components/layout/Sidebar")['default']
-    'PagePartialsLayoutHeader': typeof import("../components/page-partials/layout/Header")['default']
-    'PagePartialsLayoutSidebar': typeof import("../components/page-partials/layout/Sidebar")['default']
-    'PagePartialsSlideManagerSlideTable': typeof import("../components/page-partials/slide-manager/SlideTable")['default']
-    'SettingsAppearanceSettings': typeof import("../components/settings/AppearanceSettings")['default']
-    'SettingsDataSettings': typeof import("../components/settings/DataSettings")['default']
-    'SettingsPasswordSettings': typeof import("../components/settings/PasswordSettings")['default']
-    'SettingsProfileSettings': typeof import("../components/settings/ProfileSettings")['default']
-    'SharedImageUploader': typeof import("../components/shared/ImageUploader")['default']
-    'SlideManagerSlideTable': typeof import("../components/slide-manager/SlideTable")['default']
-    'UiImageUploader': typeof import("../components/ui/ImageUploader")['default']
-    'UiDialogDeleteModal': typeof import("../components/ui/dialog/DeleteModal")['default']
-    'UiDialogSlideFormModal': typeof import("../components/ui/dialog/SlideFormModal")['default']
-    'UiNotification': typeof import("../components/ui/notification/Notification")['default']
-    'UiPagination': typeof import("../components/ui/pagination/Pagination")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -87,43 +56,12 @@ interface _GlobalComponents {
     'LazyAppRegisterForm': LazyComponent<typeof import("../components/AppRegisterForm.vue")['default']>
     'LazyAppSidebar': LazyComponent<typeof import("../components/AppSidebar.vue")['default']>
     'LazyAuthLayout': LazyComponent<typeof import("../components/AuthLayout.vue")['default']>
-    'LazyDeleteModal': LazyComponent<typeof import("../components/DeleteModal")['default']>
-    'LazyErrorMessage': LazyComponent<typeof import("../components/ErrorMessage")['default']>
-    'LazyHeader': LazyComponent<typeof import("../components/Header")['default']>
-    'LazyImageUploader': LazyComponent<typeof import("../components/ImageUploader")['default']>
-    'LazyLoader': LazyComponent<typeof import("../components/Loader")['default']>
+    'LazyDeleteModal': LazyComponent<typeof import("../components/DeleteModal.vue")['default']>
     'LazyNavItem': LazyComponent<typeof import("../components/NavItem.vue")['default']>
-    'LazyNotification': LazyComponent<typeof import("../components/Notification")['default']>
-    'LazyPagination': LazyComponent<typeof import("../components/Pagination")['default']>
-    'LazySlideFormModal': LazyComponent<typeof import("../components/SlideFormModal")['default']>
+    'LazySlideFormModal': LazyComponent<typeof import("../components/SlideFormModal.vue")['default']>
     'LazySlideManagerPage': LazyComponent<typeof import("../components/SlideManagerPage.vue")['default']>
-    'LazySlideTable': LazyComponent<typeof import("../components/SlideTable")['default']>
-    'LazyStoryDisplay': LazyComponent<typeof import("../components/StoryDisplay")['default']>
-    'LazyStoryInput': LazyComponent<typeof import("../components/StoryInput")['default']>
+    'LazySlideTable': LazyComponent<typeof import("../components/SlideTable.vue")['default']>
     'LazySubNavItem': LazyComponent<typeof import("../components/SubNavItem.vue")['default']>
-    'LazyAuthLoginForm': LazyComponent<typeof import("../components/auth/LoginForm")['default']>
-    'LazyAuthRegisterForm': LazyComponent<typeof import("../components/auth/RegisterForm")['default']>
-    'LazyFeaturesStoryGeneratorErrorMessage': LazyComponent<typeof import("../components/features/story-generator/ErrorMessage")['default']>
-    'LazyFeaturesStoryGeneratorHeader': LazyComponent<typeof import("../components/features/story-generator/Header")['default']>
-    'LazyFeaturesStoryGeneratorLoader': LazyComponent<typeof import("../components/features/story-generator/Loader")['default']>
-    'LazyFeaturesStoryGeneratorStoryDisplay': LazyComponent<typeof import("../components/features/story-generator/StoryDisplay")['default']>
-    'LazyFeaturesStoryGeneratorStoryInput': LazyComponent<typeof import("../components/features/story-generator/StoryInput")['default']>
-    'LazyLayoutHeader': LazyComponent<typeof import("../components/layout/Header")['default']>
-    'LazyLayoutSidebar': LazyComponent<typeof import("../components/layout/Sidebar")['default']>
-    'LazyPagePartialsLayoutHeader': LazyComponent<typeof import("../components/page-partials/layout/Header")['default']>
-    'LazyPagePartialsLayoutSidebar': LazyComponent<typeof import("../components/page-partials/layout/Sidebar")['default']>
-    'LazyPagePartialsSlideManagerSlideTable': LazyComponent<typeof import("../components/page-partials/slide-manager/SlideTable")['default']>
-    'LazySettingsAppearanceSettings': LazyComponent<typeof import("../components/settings/AppearanceSettings")['default']>
-    'LazySettingsDataSettings': LazyComponent<typeof import("../components/settings/DataSettings")['default']>
-    'LazySettingsPasswordSettings': LazyComponent<typeof import("../components/settings/PasswordSettings")['default']>
-    'LazySettingsProfileSettings': LazyComponent<typeof import("../components/settings/ProfileSettings")['default']>
-    'LazySharedImageUploader': LazyComponent<typeof import("../components/shared/ImageUploader")['default']>
-    'LazySlideManagerSlideTable': LazyComponent<typeof import("../components/slide-manager/SlideTable")['default']>
-    'LazyUiImageUploader': LazyComponent<typeof import("../components/ui/ImageUploader")['default']>
-    'LazyUiDialogDeleteModal': LazyComponent<typeof import("../components/ui/dialog/DeleteModal")['default']>
-    'LazyUiDialogSlideFormModal': LazyComponent<typeof import("../components/ui/dialog/SlideFormModal")['default']>
-    'LazyUiNotification': LazyComponent<typeof import("../components/ui/notification/Notification")['default']>
-    'LazyUiPagination': LazyComponent<typeof import("../components/ui/pagination/Pagination")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -161,43 +99,12 @@ export const AppPagination: typeof import("../components/AppPagination.vue")['de
 export const AppRegisterForm: typeof import("../components/AppRegisterForm.vue")['default']
 export const AppSidebar: typeof import("../components/AppSidebar.vue")['default']
 export const AuthLayout: typeof import("../components/AuthLayout.vue")['default']
-export const DeleteModal: typeof import("../components/DeleteModal")['default']
-export const ErrorMessage: typeof import("../components/ErrorMessage")['default']
-export const Header: typeof import("../components/Header")['default']
-export const ImageUploader: typeof import("../components/ImageUploader")['default']
-export const Loader: typeof import("../components/Loader")['default']
+export const DeleteModal: typeof import("../components/DeleteModal.vue")['default']
 export const NavItem: typeof import("../components/NavItem.vue")['default']
-export const Notification: typeof import("../components/Notification")['default']
-export const Pagination: typeof import("../components/Pagination")['default']
-export const SlideFormModal: typeof import("../components/SlideFormModal")['default']
+export const SlideFormModal: typeof import("../components/SlideFormModal.vue")['default']
 export const SlideManagerPage: typeof import("../components/SlideManagerPage.vue")['default']
-export const SlideTable: typeof import("../components/SlideTable")['default']
-export const StoryDisplay: typeof import("../components/StoryDisplay")['default']
-export const StoryInput: typeof import("../components/StoryInput")['default']
+export const SlideTable: typeof import("../components/SlideTable.vue")['default']
 export const SubNavItem: typeof import("../components/SubNavItem.vue")['default']
-export const AuthLoginForm: typeof import("../components/auth/LoginForm")['default']
-export const AuthRegisterForm: typeof import("../components/auth/RegisterForm")['default']
-export const FeaturesStoryGeneratorErrorMessage: typeof import("../components/features/story-generator/ErrorMessage")['default']
-export const FeaturesStoryGeneratorHeader: typeof import("../components/features/story-generator/Header")['default']
-export const FeaturesStoryGeneratorLoader: typeof import("../components/features/story-generator/Loader")['default']
-export const FeaturesStoryGeneratorStoryDisplay: typeof import("../components/features/story-generator/StoryDisplay")['default']
-export const FeaturesStoryGeneratorStoryInput: typeof import("../components/features/story-generator/StoryInput")['default']
-export const LayoutHeader: typeof import("../components/layout/Header")['default']
-export const LayoutSidebar: typeof import("../components/layout/Sidebar")['default']
-export const PagePartialsLayoutHeader: typeof import("../components/page-partials/layout/Header")['default']
-export const PagePartialsLayoutSidebar: typeof import("../components/page-partials/layout/Sidebar")['default']
-export const PagePartialsSlideManagerSlideTable: typeof import("../components/page-partials/slide-manager/SlideTable")['default']
-export const SettingsAppearanceSettings: typeof import("../components/settings/AppearanceSettings")['default']
-export const SettingsDataSettings: typeof import("../components/settings/DataSettings")['default']
-export const SettingsPasswordSettings: typeof import("../components/settings/PasswordSettings")['default']
-export const SettingsProfileSettings: typeof import("../components/settings/ProfileSettings")['default']
-export const SharedImageUploader: typeof import("../components/shared/ImageUploader")['default']
-export const SlideManagerSlideTable: typeof import("../components/slide-manager/SlideTable")['default']
-export const UiImageUploader: typeof import("../components/ui/ImageUploader")['default']
-export const UiDialogDeleteModal: typeof import("../components/ui/dialog/DeleteModal")['default']
-export const UiDialogSlideFormModal: typeof import("../components/ui/dialog/SlideFormModal")['default']
-export const UiNotification: typeof import("../components/ui/notification/Notification")['default']
-export const UiPagination: typeof import("../components/ui/pagination/Pagination")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -229,43 +136,12 @@ export const LazyAppPagination: LazyComponent<typeof import("../components/AppPa
 export const LazyAppRegisterForm: LazyComponent<typeof import("../components/AppRegisterForm.vue")['default']>
 export const LazyAppSidebar: LazyComponent<typeof import("../components/AppSidebar.vue")['default']>
 export const LazyAuthLayout: LazyComponent<typeof import("../components/AuthLayout.vue")['default']>
-export const LazyDeleteModal: LazyComponent<typeof import("../components/DeleteModal")['default']>
-export const LazyErrorMessage: LazyComponent<typeof import("../components/ErrorMessage")['default']>
-export const LazyHeader: LazyComponent<typeof import("../components/Header")['default']>
-export const LazyImageUploader: LazyComponent<typeof import("../components/ImageUploader")['default']>
-export const LazyLoader: LazyComponent<typeof import("../components/Loader")['default']>
+export const LazyDeleteModal: LazyComponent<typeof import("../components/DeleteModal.vue")['default']>
 export const LazyNavItem: LazyComponent<typeof import("../components/NavItem.vue")['default']>
-export const LazyNotification: LazyComponent<typeof import("../components/Notification")['default']>
-export const LazyPagination: LazyComponent<typeof import("../components/Pagination")['default']>
-export const LazySlideFormModal: LazyComponent<typeof import("../components/SlideFormModal")['default']>
+export const LazySlideFormModal: LazyComponent<typeof import("../components/SlideFormModal.vue")['default']>
 export const LazySlideManagerPage: LazyComponent<typeof import("../components/SlideManagerPage.vue")['default']>
-export const LazySlideTable: LazyComponent<typeof import("../components/SlideTable")['default']>
-export const LazyStoryDisplay: LazyComponent<typeof import("../components/StoryDisplay")['default']>
-export const LazyStoryInput: LazyComponent<typeof import("../components/StoryInput")['default']>
+export const LazySlideTable: LazyComponent<typeof import("../components/SlideTable.vue")['default']>
 export const LazySubNavItem: LazyComponent<typeof import("../components/SubNavItem.vue")['default']>
-export const LazyAuthLoginForm: LazyComponent<typeof import("../components/auth/LoginForm")['default']>
-export const LazyAuthRegisterForm: LazyComponent<typeof import("../components/auth/RegisterForm")['default']>
-export const LazyFeaturesStoryGeneratorErrorMessage: LazyComponent<typeof import("../components/features/story-generator/ErrorMessage")['default']>
-export const LazyFeaturesStoryGeneratorHeader: LazyComponent<typeof import("../components/features/story-generator/Header")['default']>
-export const LazyFeaturesStoryGeneratorLoader: LazyComponent<typeof import("../components/features/story-generator/Loader")['default']>
-export const LazyFeaturesStoryGeneratorStoryDisplay: LazyComponent<typeof import("../components/features/story-generator/StoryDisplay")['default']>
-export const LazyFeaturesStoryGeneratorStoryInput: LazyComponent<typeof import("../components/features/story-generator/StoryInput")['default']>
-export const LazyLayoutHeader: LazyComponent<typeof import("../components/layout/Header")['default']>
-export const LazyLayoutSidebar: LazyComponent<typeof import("../components/layout/Sidebar")['default']>
-export const LazyPagePartialsLayoutHeader: LazyComponent<typeof import("../components/page-partials/layout/Header")['default']>
-export const LazyPagePartialsLayoutSidebar: LazyComponent<typeof import("../components/page-partials/layout/Sidebar")['default']>
-export const LazyPagePartialsSlideManagerSlideTable: LazyComponent<typeof import("../components/page-partials/slide-manager/SlideTable")['default']>
-export const LazySettingsAppearanceSettings: LazyComponent<typeof import("../components/settings/AppearanceSettings")['default']>
-export const LazySettingsDataSettings: LazyComponent<typeof import("../components/settings/DataSettings")['default']>
-export const LazySettingsPasswordSettings: LazyComponent<typeof import("../components/settings/PasswordSettings")['default']>
-export const LazySettingsProfileSettings: LazyComponent<typeof import("../components/settings/ProfileSettings")['default']>
-export const LazySharedImageUploader: LazyComponent<typeof import("../components/shared/ImageUploader")['default']>
-export const LazySlideManagerSlideTable: LazyComponent<typeof import("../components/slide-manager/SlideTable")['default']>
-export const LazyUiImageUploader: LazyComponent<typeof import("../components/ui/ImageUploader")['default']>
-export const LazyUiDialogDeleteModal: LazyComponent<typeof import("../components/ui/dialog/DeleteModal")['default']>
-export const LazyUiDialogSlideFormModal: LazyComponent<typeof import("../components/ui/dialog/SlideFormModal")['default']>
-export const LazyUiNotification: LazyComponent<typeof import("../components/ui/notification/Notification")['default']>
-export const LazyUiPagination: LazyComponent<typeof import("../components/ui/pagination/Pagination")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

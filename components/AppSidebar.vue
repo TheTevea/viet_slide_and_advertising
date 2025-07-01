@@ -75,7 +75,7 @@ interface Props {
   onCategoryChange: (category: SlideCategory) => void
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
 
 const openMenus = ref({ 
   mobile: false, 
@@ -85,8 +85,6 @@ const openMenus = ref({
 const toggleMenu = (menu: 'mobile' | 'website') => {
   openMenus.value[menu] = !openMenus.value[menu]
 }
-
-const props = defineProps<Props>()
 
 // Watch for category changes to keep menus open
 watch(() => props.activeCategory, (newCategory) => {

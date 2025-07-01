@@ -40,6 +40,8 @@ const categoryTitles: Record<SlideCategory, string> = {
   'website-advertising': 'Website Advertising',
 }
 
+// Get active category from the page props or default
+const route = useRoute()
 const activeCategory = ref<SlideCategory>('mobile-slideshow')
 const isSidebarOpen = ref(false)
 
@@ -70,4 +72,8 @@ onMounted(() => {
     onUnmounted(() => window.removeEventListener('resize', handleResize))
   }
 })
+
+// Provide the activeCategory to child components
+provide('activeCategory', activeCategory)
+provide('handleCategoryChange', handleCategoryChange)
 </script>

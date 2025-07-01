@@ -1,23 +1,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@pinia/nuxt'
   ],
   css: ['~/theme/app.css'],
   runtimeConfig: {
     public: {
       geminiApiKey: process.env.GEMINI_API_KEY
     }
-  },
-  typescript: {
-    typeCheck: false
-  },
-  tailwindcss: {
-    configPath: '~/tailwind.config.js'
-  },
-  nitro: {
-    preset: 'static'
   },
   app: {
     head: {

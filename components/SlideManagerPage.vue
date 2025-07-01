@@ -31,7 +31,7 @@
     <SlideFormModal
       :is-open="isFormModalOpen"
       :slide="selectedSlide"
-      :category="category"
+      :category="currentCategory"
       @close="isFormModalOpen = false"
     />
 
@@ -48,15 +48,22 @@ import { Plus, Image as ImageIcon } from 'lucide-vue-next'
 import type { Slide, SlideCategory } from '~/types'
 
 interface Props {
-  category: SlideCategory
+  category?: SlideCategory
 }
 
 const props = defineProps<Props>()
 
+// Get category from props or inject from layout
+const currentCategory = computed(() => {
+  if (props.category) return props.category
+  const injectedCategory = inject<Ref<SlideCategory>>('activeCategory')
+  return injectedCategory?.value || 'mobile-slideshow'
+})
+
 const slidesStore = useSlidesStore()
 const { getSlidesByCategory, deleteSlide } = slidesStore
 
-const slides = computed(() => getSlidesByCategory(props.category))
+const slides = computed(() => getSlidesByCategory(currentCategory.value))
 
 const isFormModalOpen = ref(false)
 const isDeleteModalOpen = ref(false)
