@@ -12,7 +12,13 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
+      'AppHeader': typeof import("../components/AppHeader.vue")['default']
+    'AppNotification': typeof import("../components/AppNotification.vue")['default']
+    'SlideManagerPage': typeof import("../components/SlideManagerPage.vue")['default']
+    'LayoutNavItem': typeof import("../components/layout/NavItem.vue")['default']
+    'LayoutSidebar': typeof import("../components/layout/Sidebar.vue")['default']
+    'LayoutSubNavItem': typeof import("../components/layout/SubNavItem.vue")['default']
+    'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
     'ClientOnly': typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
@@ -36,7 +42,13 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
+      'LazyAppHeader': LazyComponent<typeof import("../components/AppHeader.vue")['default']>
+    'LazyAppNotification': LazyComponent<typeof import("../components/AppNotification.vue")['default']>
+    'LazySlideManagerPage': LazyComponent<typeof import("../components/SlideManagerPage.vue")['default']>
+    'LazyLayoutNavItem': LazyComponent<typeof import("../components/layout/NavItem.vue")['default']>
+    'LazyLayoutSidebar': LazyComponent<typeof import("../components/layout/Sidebar.vue")['default']>
+    'LazyLayoutSubNavItem': LazyComponent<typeof import("../components/layout/SubNavItem.vue")['default']>
+    'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
     'LazyClientOnly': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']>
@@ -66,6 +78,12 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const AppHeader: typeof import("../components/AppHeader.vue")['default']
+export const AppNotification: typeof import("../components/AppNotification.vue")['default']
+export const SlideManagerPage: typeof import("../components/SlideManagerPage.vue")['default']
+export const LayoutNavItem: typeof import("../components/layout/NavItem.vue")['default']
+export const LayoutSidebar: typeof import("../components/layout/Sidebar.vue")['default']
+export const LayoutSubNavItem: typeof import("../components/layout/SubNavItem.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -90,6 +108,12 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyAppHeader: LazyComponent<typeof import("../components/AppHeader.vue")['default']>
+export const LazyAppNotification: LazyComponent<typeof import("../components/AppNotification.vue")['default']>
+export const LazySlideManagerPage: LazyComponent<typeof import("../components/SlideManagerPage.vue")['default']>
+export const LazyLayoutNavItem: LazyComponent<typeof import("../components/layout/NavItem.vue")['default']>
+export const LazyLayoutSidebar: LazyComponent<typeof import("../components/layout/Sidebar.vue")['default']>
+export const LazyLayoutSubNavItem: LazyComponent<typeof import("../components/layout/SubNavItem.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
