@@ -32,4 +32,5 @@ export { computedAsync, asyncComputed, computedEager, eagerComputed, computedInj
 export { useAuth } from '../composables/useAuth';
 export { useSlides } from '../composables/useSlides';
 export { autocompleteUtil as tw } from '../node_modules/@nuxtjs/tailwindcss/dist/runtime/utils';
+export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
